@@ -23,7 +23,7 @@ from pandas.plotting import scatter_matrix
 data = pd.read_csv('train.csv')
 data = data.drop("Id", axis=1)
 attributes = ["SalePrice","OverallQual", "GrLivArea", "GarageCars", "GarageArea", "TotalBsmtSF"]
-scatter_matrix(data[attributes], figsize=(70, 70))
+scatter_matrix(data[attributes], figsize=(17, 17)
 ```
 
 ```python
