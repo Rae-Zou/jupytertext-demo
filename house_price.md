@@ -15,23 +15,25 @@ jupyter:
 
 ```python
 import pandas as pd
-```
-
-```python
-data = pd.read_csv('train.csv')
-```
-
-```python
 from pandas.plotting import scatter_matrix
+
+```
+
+```python
 # remove irrelevant variables
+data = pd.read_csv('train.csv')
 data = data.drop("Id", axis=1)
 # create the test set
-from sklearn.model_selection import train_test_split
-train_data, test_data = train_test_split(data, test_size=0.2, random_state=42)
+# from sklearn.model_selection import train_test_split
+# train_data, test_data = train_test_split(data, test_size=0.2, random_state=42)
 # compute the standard correlation coefficient
-housing = train_data.copy()
+housing = data.copy()
 attributes = ["SalePrice","OverallQual", "GrLivArea", "GarageCars", "GarageArea"]
-scatter_matrix(housing[attributes], figsize=(12, 12))
+scatter_matrix(housing[attributes], figsize=(10, 100))
+```
+
+```python
+#
 ```
 
 ```python
